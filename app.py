@@ -21,8 +21,9 @@ with tab_corrida:
   with st.form('calc_pace_form'):
     st.write('Calculadora de Pace')
     distancia = st.number_input('Insira quantos km você correu', 1, 42)
-    tempo_min = st.number_input('Insira em quantos minutos você correu', 1, 59)
-    tempo_seg = st.number_input('Insira em quantos segundos você correu', 0, 59)
+    col_corrida_1, col_corrida_2 = st.columns([1, 1])
+    tempo_min = col_corrida_1.number_input('Insira em quantos minutos você correu', 1, 59)
+    tempo_seg = col_corrida_2.number_input('Insira em quantos segundos você correu', 0, 59)
     enviar = st.form_submit_button('Enviar')
     if enviar:
       pace_min, pace_seg = calc_pace(distancia, tempo_min, tempo_seg)
