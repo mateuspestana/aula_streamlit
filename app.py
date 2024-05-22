@@ -26,7 +26,7 @@ with tab_corrida:
     enviar = st.form_submit_button('Enviar')
     if enviar:
       pace_min, pace_seg = calc_pace(distancia, tempo_min, tempo_seg)
-      st.write(f'Seu pace é de {pace_min} minutos e {pace_seg} segundos por km'})
+      st.write(f'Seu pace é de {pace_min} minutos e {pace_seg} segundos por km')
 
   
   
